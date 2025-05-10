@@ -51,7 +51,7 @@ public class TabuleiroConsole {
 				Iterator<Integer> coordenadas = Arrays.stream(digitado.split(",")).map(e -> Integer.parseInt(e.trim()))
 						.iterator();
 
-				digitado = ValorDigitado("1- Abrir 2- Marcar ou Desmarcar: ");
+				digitado = ValorDigitado("1- Abrir \n2- Marcar ou Desmarcar \nResposta: ");
 
 				if ("1".equals(digitado)) {
 					tabuleiro.abrir(coordenadas.next(), coordenadas.next());
