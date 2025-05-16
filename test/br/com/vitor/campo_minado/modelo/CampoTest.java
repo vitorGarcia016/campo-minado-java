@@ -1,13 +1,10 @@
 package br.com.vitor.campo_minado.modelo;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import br.com.vitor.campo_minado.excecao.ExplosaoException;
 
 class CampoTest {
 
@@ -90,13 +87,6 @@ class CampoTest {
 		assertFalse(campo.abrir());
 	}
 
-	@Test
-	void abrirNaoMarcadoMinadoTest() {
-		campo.minar();
-		assertThrows(ExplosaoException.class, () -> {
-			campo.abrir();
-		});
-	}
 
 	@Test
 	void abrirComVizinhosTest() {
